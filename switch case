@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float sub1, sub2, sub3, total, percentage;
+    char grade;
+
+    // Input marks of three subjects
+    cout << "Enter marks of subject 1: ";
+    cin >> sub1;
+    cout << "Enter marks of subject 2: ";
+    cin >> sub2;
+    cout << "Enter marks of subject 3: ";
+    cin >> sub3;
+
+    // Calculate total marks and percentage
+    total = sub1 + sub2 + sub3;
+    percentage = (total / 300) * 100;
+
+    // Determine grade using switch case
+    switch(static_cast<int>(percentage / 10)) {
+        case 10:
+        case 9:
+            grade = 'A';
+            break;
+        case 8:
+            grade = 'B';
+            break;
+        case 7:
+            grade = 'C';
+            break;
+        case 6:
+            grade = 'D';
+            break;
+        default:
+            grade = 'F';
+            break;
+    }
+
+    // Output results
+    cout << "Total marks: " << total << endl;
+    cout << "Percentage: " << percentage << "%" << endl;
+    cout << "Grade: " << grade << endl;
+
+    return 0;
+}
